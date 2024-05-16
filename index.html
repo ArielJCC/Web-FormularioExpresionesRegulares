@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Registro de Usuario</title>
+    <!-- Enlace a la fuente Roboto de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Contenido principal de la página -->
+    <main>
+      <!-- Inicio del formulario -->
+      <form action="" class="formulario" id="formulario">
+        <!-- Grupo: Usuario -->
+        <div class="formulario__grupo" id="grupo__usuario">
+          <!-- Grupo para el campo de usuario -->
+          <label for="usuario" class="formulario__label">Usuario</label>
+          <!-- Etiqueta para el campo de usuario -->
+          <div class="formulario__grupo-input">
+            <!-- Contenedor para el campo de usuario -->
+            <input
+              type="text"
+              class="formulario__input"
+              name="usuario"
+              id="usuario"
+              placeholder="Daniel2001"
+            />
+            <!-- Campo de entrada de texto para el usuario -->
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            <!-- Icono de estado de validación -->
+          </div>
+          <p class="formulario__input-error">
+            <!-- Mensaje de error para el campo de usuario -->
+            El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+            números, letras y guiones.
+          </p>
+        </div>
+
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+          <label for="nombre" class="formulario__label">Nombres</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="nombre"
+              id="nombre"
+              placeholder="Jeremias Guale"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El nombre solo puede contener letras.
+          </p>
+        </div>
+
+        <!-- Grupo: Contraseña -->
+        <div class="formulario__grupo" id="grupo__password">
+          <label for="password" class="formulario__label">Contraseña</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="password"
+              class="formulario__input"
+              name="password"
+              id="password"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            La contraseña tiene que ser de 8 a 12 dígitos.
+          </p>
+        </div>
+
+        <!-- Grupo: Confirmar Contraseña -->
+        <div class="formulario__grupo" id="grupo__password2">
+          <label for="password2" class="formulario__label"
+            >Confirmar Contraseña</label
+          >
+          <div class="formulario__grupo-input">
+            <input
+              type="password"
+              class="formulario__input"
+              name="password2"
+              id="password2"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">Las contraseñas no coinciden.</p>
+        </div>
+
+        <!-- Grupo: Correo Electrónico -->
+        <div class="formulario__grupo" id="grupo__correo">
+          <label for="correo" class="formulario__label"
+            >Correo Electrónico</label
+          >
+          <div class="formulario__grupo-input">
+            <input
+              type="email"
+              class="formulario__input"
+              name="correo"
+              id="correo"
+              placeholder="alguien@correo.com"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El correo solo puede contener letras, números, puntos, guiones y
+            guion bajo.
+          </p>
+        </div>
+
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+          <label for="telefono" class="formulario__label">Teléfono</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="telefono"
+              id="telefono"
+              placeholder="0123456789"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El número de teléfono solo puede contener 10 números.
+          </p>
+        </div>
+
+        <!-- Grupo: Dirección -->
+        <div class="formulario__grupo" id="grupo__direccion">
+          <label for="direccion" class="formulario__label">Dirección</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="direccion"
+              id="direccion"
+              placeholder="Avenida 2 calle 13"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            La dirección solo puede contener letras y números.
+          </p>
+        </div>
+
+        <!-- Grupo: País -->
+        <div class="formulario__grupo" id="grupo__pais">
+          <label for="pais" class="formulario__label">País</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="pais"
+              id="pais"
+              placeholder="Ecuador"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El país solo puede contener letras.
+          </p>
+        </div>
+
+        <!-- Mensajes de éxito y error -->
+        <div id="mensaje_error" class="formulario__mensaje">
+          <!-- Contenedor del mensaje de error -->
+          <p>Por favor completa todos los campos correctamente</p>
+          <!-- Mensaje de error -->
+        </div>
+        <p id="mensaje_exito" class="formulario__mensaje-exito">
+          <!-- Contenedor del mensaje de éxito -->
+          Formulario enviado exitosamente!
+          <!-- Mensaje de éxito -->
+        </p>
+        <!-- Botón de envío -->
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <!-- Grupo para el botón de envío del formulario -->
+          <button type="submit" class="formulario__btn">Enviar</button>
+          <!-- Botón de envío -->
+        </div>
+      </form>
+    </main>
+
+    <!-- Script JavaScript al final del cuerpo del documento -->
+    <script src="script.js"></script>
+  </body>
+</html>
